@@ -12,27 +12,78 @@
 				{
 					"name": "Get All Addresses",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyODk3OTQsImVtYWlsIjoib2xpdmlhLndpamF5YUBleGFtcGxlLmNvbSJ9.NLMLRuCSKDHLl0gKAuT5Hnn3pKZ1HDReLIF8ttUEQKQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/admin/addresses",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"admin",
+								"addresses"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Get Detail Address",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyODk3OTQsImVtYWlsIjoib2xpdmlhLndpamF5YUBleGFtcGxlLmNvbSJ9.NLMLRuCSKDHLl0gKAuT5Hnn3pKZ1HDReLIF8ttUEQKQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/admin/addresses/{{addressId}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"admin",
+								"addresses",
+								"{{addressId}}"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Create Address",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyODk3OTQsImVtYWlsIjoib2xpdmlhLndpamF5YUBleGFtcGxlLmNvbSJ9.NLMLRuCSKDHLl0gKAuT5Hnn3pKZ1HDReLIF8ttUEQKQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"street\": \"string\",\r\n  \"buildingName\": \"string\",\r\n  \"city\": \"string\",\r\n  \"state\": \"string\",\r\n  \"country\": \"string\",\r\n  \"pincode\": \"string\"\r\n}",
+							"raw": "{\r\n  \"street\": \"string\",\r\n  \"buildingName\": \"s1tring\",\r\n  \"city\": \"string\",\r\n  \"state\": \"string\",\r\n  \"country\": \"string\",\r\n  \"pincode\": \"string\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -55,11 +106,21 @@
 				{
 					"name": "Update Address",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyODk3OTQsImVtYWlsIjoib2xpdmlhLndpamF5YUBleGFtcGxlLmNvbSJ9.NLMLRuCSKDHLl0gKAuT5Hnn3pKZ1HDReLIF8ttUEQKQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"addressId\": 1,\r\n  \"street\": \"string\",\r\n  \"buildingName\": \"string\",\r\n  \"city\": \"string\",\r\n  \"state\": \"string\",\r\n  \"country\": \"string\",\r\n  \"pincode\": \"string\",\r\n  \"users\": [\r\n    {\r\n      \"userId\": 1,\r\n      \"firstName\": \"GLDiyiMYiPJcxCdOxRfJ\",\r\n      \"lastName\": \"jdoxJ\",\r\n      \"mobileNumber\": \"5689971380\",\r\n      \"email\": \"string\",\r\n      \"password\": \"string\",\r\n      \"roles\": [\r\n        {\r\n          \"roleId\": 1,\r\n          \"roleName\": \"string\"\r\n        }\r\n      ],\r\n      \"addresses\": [\r\n        \"string\"\r\n      ],\r\n      \"cart\": {\r\n        \"cartId\": 1,\r\n        \"user\": \"string\",\r\n        \"cartItems\": [\r\n          {\r\n            \"cartItemId\": 1,\r\n            \"cart\": \"string\",\r\n            \"product\": {\r\n              \"productId\": 1,\r\n              \"productName\": \"string\",\r\n              \"image\": \"string\",\r\n              \"description\": \"string\",\r\n              \"quantity\": 1,\r\n              \"price\": 1,\r\n              \"discount\": 1,\r\n              \"specialPrice\": 1,\r\n              \"category\": {\r\n                \"categoryId\": 1,\r\n                \"categoryName\": \"string\",\r\n                \"products\": [\r\n                  \"string\"\r\n                ]\r\n              },\r\n              \"products\": [\r\n                \"string\"\r\n              ],\r\n              \"orderItems\": [\r\n                {\r\n                  \"orderItemId\": 1,\r\n                  \"product\": \"string\",\r\n                  \"order\": {\r\n                    \"orderId\": 1,\r\n                    \"email\": \"string\",\r\n                    \"orderItems\": [\r\n                      \"string\"\r\n                    ],\r\n                    \"orderDate\": \"2025-02-11\",\r\n                    \"payment\": {\r\n                      \"paymentId\": 1,\r\n                      \"order\": \"string\",\r\n                      \"paymentMethod\": \"string\"\r\n                    },\r\n                    \"totalAmount\": 1,\r\n                    \"orderStatus\": \"string\"\r\n                  },\r\n                  \"quantity\": 1,\r\n                  \"discount\": 1,\r\n                  \"orderedProductPrice\": 1\r\n                }\r\n              ]\r\n            },\r\n            \"quantity\": 1,\r\n            \"discount\": 1,\r\n            \"productPrice\": 1\r\n          }\r\n        ],\r\n        \"totalPrice\": 1\r\n      }\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n  \"addressId\": 1,\r\n  \"street\": \"string\",\r\n  \"buildingName\": \"string\",\r\n  \"city\": \"string\",\r\n  \"state\": \"string\",\r\n  \"country\": \"string\",\r\n  \"pincode\": \"string\",\r\n  \"users\": [\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -83,6 +144,16 @@
 				{
 					"name": "Delete Address",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyODk3OTQsImVtYWlsIjoib2xpdmlhLndpamF5YUBleGFtcGxlLmNvbSJ9.NLMLRuCSKDHLl0gKAuT5Hnn3pKZ1HDReLIF8ttUEQKQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
@@ -111,7 +182,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"email\": \"string\",\r\n  \"password\": \"string\"\r\n}",
+							"raw": "{\r\n  \"email\": \"olivia.wijaya@example.com\",\r\n  \"password\": \"password\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -137,7 +208,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"userId\": 0,\r\n  \"firstName\": \"string\",\r\n  \"lastName\": \"string\",\r\n  \"mobileNumber\": \"string\",\r\n  \"email\": \"string\",\r\n  \"password\": \"string\",\r\n  \"roles\": [\r\n    {\r\n      \"roleId\": 0,\r\n      \"roleName\": \"string\"\r\n    }\r\n  ],\r\n  \"address\": {\r\n    \"addressId\": 0,\r\n    \"street\": \"string\",\r\n    \"buildingName\": \"string\",\r\n    \"city\": \"string\",\r\n    \"state\": \"string\",\r\n    \"country\": \"string\",\r\n    \"pincode\": \"string\"\r\n  },\r\n  \"cart\": {\r\n    \"cartId\": 0,\r\n    \"totalPrice\": 0,\r\n    \"products\": [\r\n      {\r\n        \"productId\": 0,\r\n        \"productName\": \"string\",\r\n        \"image\": \"string\",\r\n        \"description\": \"string\",\r\n        \"quantity\": 0,\r\n        \"price\": 0,\r\n        \"discount\": 0,\r\n        \"specialPrice\": 0\r\n      }\r\n    ]\r\n  }\r\n}",
+							"raw": "{\r\n  \"firstName\": \"string\",\r\n  \"lastName\": \"string\",\r\n  \"mobileNumber\": \"1234567890\",\r\n  \"email\": \"dani@gmail.com\",\r\n  \"password\": \"dani\",\r\n  \"address\": {\r\n    \"addressId\": 11,\r\n    \"street\": \"string\",\r\n    \"buildingName\": \"string\",\r\n    \"city\": \"string\",\r\n    \"state\": \"string\",\r\n    \"country\": \"string\",\r\n    \"pincode\": \"string\"\r\n  }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -275,6 +346,16 @@
 				{
 					"name": "Get All Categories",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyOTAxNzYsImVtYWlsIjoib2xpdmlhLndpamF5YUBleGFtcGxlLmNvbSJ9.P_6ScaUf4Wzx8S1wjdas6-2OrQbz5x5jkDH3_uf_b9Q",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -372,6 +453,16 @@
 				{
 					"name": "Get All Orders",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyOTAzMjQsImVtYWlsIjoib2xpdmlhLndpamF5YUBleGFtcGxlLmNvbSJ9.Gcq2Tb5Qe4E3lvECrJWdSKOzbAS-pG_vV_EA2RdRxcg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -390,22 +481,77 @@
 				{
 					"name": "Get User Orders",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyOTAzMjQsImVtYWlsIjoib2xpdmlhLndpamF5YUBleGFtcGxlLmNvbSJ9.Gcq2Tb5Qe4E3lvECrJWdSKOzbAS-pG_vV_EA2RdRxcg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/public/users/{{email}}/orders",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"public",
+								"users",
+								"{{email}}",
+								"orders"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Get Detail User Order",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyOTAzMjQsImVtYWlsIjoib2xpdmlhLndpamF5YUBleGFtcGxlLmNvbSJ9.Gcq2Tb5Qe4E3lvECrJWdSKOzbAS-pG_vV_EA2RdRxcg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/public/users/{{email}}/orders/{{orderId}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"public",
+								"users",
+								"{{email}}",
+								"orders",
+								"{{orderId}}"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Order Payment",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyOTAzMjQsImVtYWlsIjoib2xpdmlhLndpamF5YUBleGFtcGxlLmNvbSJ9.Gcq2Tb5Qe4E3lvECrJWdSKOzbAS-pG_vV_EA2RdRxcg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"url": {
@@ -429,6 +575,16 @@
 				{
 					"name": "Update Order Status",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyOTAzMjQsImVtYWlsIjoib2xpdmlhLndpamF5YUBleGFtcGxlLmNvbSJ9.Gcq2Tb5Qe4E3lvECrJWdSKOzbAS-pG_vV_EA2RdRxcg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"url": {
@@ -457,6 +613,16 @@
 				{
 					"name": "Get All Product",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyOTAzMjQsImVtYWlsIjoib2xpdmlhLndpamF5YUBleGFtcGxlLmNvbSJ9.Gcq2Tb5Qe4E3lvECrJWdSKOzbAS-pG_vV_EA2RdRxcg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -475,6 +641,16 @@
 				{
 					"name": "Get Products with Keyword",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyOTAzMjQsImVtYWlsIjoib2xpdmlhLndpamF5YUBleGFtcGxlLmNvbSJ9.Gcq2Tb5Qe4E3lvECrJWdSKOzbAS-pG_vV_EA2RdRxcg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -495,10 +671,20 @@
 				{
 					"name": "Get All Product by Categories",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyOTAzMjQsImVtYWlsIjoib2xpdmlhLndpamF5YUBleGFtcGxlLmNvbSJ9.Gcq2Tb5Qe4E3lvECrJWdSKOzbAS-pG_vV_EA2RdRxcg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BASE_URL}}/public/categories/{{categoryId}}/product",
+							"raw": "{{BASE_URL}}/public/categories/{{categoryId}}/products",
 							"host": [
 								"{{BASE_URL}}"
 							],
@@ -506,15 +692,25 @@
 								"public",
 								"categories",
 								"{{categoryId}}",
-								"product"
+								"products"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Add Product to Category",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyOTAzMjQsImVtYWlsIjoib2xpdmlhLndpamF5YUBleGFtcGxlLmNvbSJ9.Gcq2Tb5Qe4E3lvECrJWdSKOzbAS-pG_vV_EA2RdRxcg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -544,6 +740,16 @@
 				{
 					"name": "Update Product",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyOTAzMjQsImVtYWlsIjoib2xpdmlhLndpamF5YUBleGFtcGxlLmNvbSJ9.Gcq2Tb5Qe4E3lvECrJWdSKOzbAS-pG_vV_EA2RdRxcg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
@@ -572,6 +778,16 @@
 				{
 					"name": "Delete Product",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyOTAzMjQsImVtYWlsIjoib2xpdmlhLndpamF5YUBleGFtcGxlLmNvbSJ9.Gcq2Tb5Qe4E3lvECrJWdSKOzbAS-pG_vV_EA2RdRxcg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
@@ -591,16 +807,27 @@
 				{
 					"name": "Update Product Image",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyOTAzMjQsImVtYWlsIjoib2xpdmlhLndpamF5YUBleGFtcGxlLmNvbSJ9.Gcq2Tb5Qe4E3lvECrJWdSKOzbAS-pG_vV_EA2RdRxcg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"image\": \"string\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Acer/Downloads/Jiwater - Noah.png"
 								}
-							}
+							]
 						},
 						"url": {
 							"raw": "{{BASE_URL}}/admin/products/{{productId}}/image",
@@ -625,6 +852,16 @@
 				{
 					"name": "Get All Users",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyOTA5MzAsImVtYWlsIjoib2xpdmlhLndpamF5YUBleGFtcGxlLmNvbSJ9.ZA8vdrMWdX1FdAI88yz3k-Lq7jvVDUcLttV26nor_GE",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -643,6 +880,16 @@
 				{
 					"name": "Get Detail User",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyOTA5MzAsImVtYWlsIjoib2xpdmlhLndpamF5YUBleGFtcGxlLmNvbSJ9.ZA8vdrMWdX1FdAI88yz3k-Lq7jvVDUcLttV26nor_GE",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -662,11 +909,21 @@
 				{
 					"name": "Edit User",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyOTA5MzAsImVtYWlsIjoib2xpdmlhLndpamF5YUBleGFtcGxlLmNvbSJ9.ZA8vdrMWdX1FdAI88yz3k-Lq7jvVDUcLttV26nor_GE",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"userId\": 1,\r\n  \"firstName\": \"string\",\r\n  \"lastName\": \"string\",\r\n  \"mobileNumber\": \"string\",\r\n  \"email\": \"string\",\r\n  \"password\": \"string\",\r\n  \"roles\": [\r\n    {\r\n      \"roleId\": 1,\r\n      \"roleName\": \"string\"\r\n    }\r\n  ],\r\n  \"address\": {\r\n    \"addressId\": 1,\r\n    \"street\": \"string\",\r\n    \"buildingName\": \"string\",\r\n    \"city\": \"string\",\r\n    \"state\": \"string\",\r\n    \"country\": \"string\",\r\n    \"pincode\": \"string\"\r\n  },\r\n  \"cart\": {\r\n    \"cartId\": 1,\r\n    \"totalPrice\": 1,\r\n    \"products\": [\r\n      {\r\n        \"productId\": 1,\r\n        \"productName\": \"string\",\r\n        \"image\": \"string\",\r\n        \"description\": \"string\",\r\n        \"quantity\": 1,\r\n        \"price\": 1,\r\n        \"discount\": 1,\r\n        \"specialPrice\": 1\r\n      }\r\n    ]\r\n  }\r\n}",
+							"raw": "{\r\n  \"userId\": 1,\r\n  \"firstName\": \"string\",\r\n  \"lastName\": \"string\",\r\n  \"mobileNumber\": \"1234567890\",\r\n  \"email\": \"strin123g@gmail.com\",\r\n  \"password\": \"string\",\r\n  \"roles\": [\r\n    {\r\n      \"roleId\": 1,\r\n      \"roleName\": \"string\"\r\n    }\r\n  ],\r\n  \"address\": {\r\n    \"addressId\": 1,\r\n    \"street\": \"string\",\r\n    \"buildingName\": \"string\",\r\n    \"city\": \"string\",\r\n    \"state\": \"string\",\r\n    \"country\": \"string\",\r\n    \"pincode\": \"string\"\r\n  },\r\n  \"cart\": {\r\n    \"cartId\": 1,\r\n    \"totalPrice\": 1,\r\n    \"products\": [\r\n      {\r\n        \"productId\": 1,\r\n        \"productName\": \"string\",\r\n        \"image\": \"string\",\r\n        \"description\": \"string\",\r\n        \"quantity\": 1,\r\n        \"price\": 1,\r\n        \"discount\": 1,\r\n        \"specialPrice\": 1\r\n      }\r\n    ]\r\n  }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -690,6 +947,16 @@
 				{
 					"name": "Delete User",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyOTA5MzAsImVtYWlsIjoib2xpdmlhLndpamF5YUBleGFtcGxlLmNvbSJ9.ZA8vdrMWdX1FdAI88yz3k-Lq7jvVDUcLttV26nor_GE",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {

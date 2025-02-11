@@ -11,6 +11,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.app.config.AppConstants;
@@ -46,6 +47,9 @@ public class ECommerceApplication implements CommandLineRunner {
     private CartItemRepo cartItemRepo;
     @Autowired
     private OrderItemRepo orderItemRepo;
+    @Autowired
+	private PasswordEncoder passwordEncoder;
+
 
     private final Faker faker = new Faker(new Locale("in-ID"));
 
@@ -117,7 +121,8 @@ public class ECommerceApplication implements CommandLineRunner {
                 user.setLastName(generateValidName());
                 user.setMobileNumber(faker.numerify("##########"));
                 user.setEmail(faker.internet().safeEmailAddress());
-                user.setPassword("password");
+                String encodedPass = passwordEncoder.encode("password");
+                user.setPassword(encodedPass);
 
                 if (!roles.isEmpty()) {
                     user.setRoles(new HashSet<>(Collections.singletonList(roles.get(0))));
