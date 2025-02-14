@@ -11,6 +11,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.app.entites.Cart;
@@ -64,6 +65,9 @@ public class OrderServiceImpl implements OrderService {
 	@Autowired
 	public ModelMapper modelMapper;
 
+	@Autowired
+	public PasswordEncoder passwordEncoder;
+
 	@Override
 	public OrderDTO placeOrder(String email, Long cartId, String cardNumber, String cvc) {
 
@@ -84,8 +88,10 @@ public class OrderServiceImpl implements OrderService {
 		Payment payment = new Payment();
 		payment.setOrder(order);
 		payment.setPaymentMethod("Credit Card");
-		payment.setCardNumber(cardNumber);
-		payment.setCvc(cvc);
+		String encodedNumber = passwordEncoder.encode(cardNumber);
+		payment.setCardNumber(encodedNumber);
+		String encodedCVC = passwordEncoder.encode(cvc);
+		payment.setCvc(encodedCVC);
 
 		payment = paymentRepo.save(payment);
 
