@@ -192,7 +192,8 @@ public class ECommerceApplication implements CommandLineRunner {
         if (paymentRepo.count() == 0) {
             List<Order> orders = orderRepo.findAll();
             List<Payment> payments = orders.stream()
-                .map(order -> new Payment(null, order, faker.finance().creditCard()))
+                .map(order -> new Payment(null, order, faker.finance().creditCard(), faker.number().digits(16), // Generate 16-digit card number
+                faker.number().digits(3)))
                 .toList();
             paymentRepo.saveAll(payments);
             System.out.println("Payments seeded.");
